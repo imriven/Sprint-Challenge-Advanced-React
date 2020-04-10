@@ -3,14 +3,25 @@ import Styled from "styled-components";
 
 
 const ContainerDiv = Styled.div`
-display: flex;
-flex-wrap:column:
+text-align: center;
 margin: 5% 0;
-padding: 1%;
-width: 30%;
+padding: 3%;
+width: 80%;
 color:white;
-background-color: black; 
+background-color: cadetBlue; 
 border-radius: 20px;
+box-shadow: 5px 5px 8px black;
+`
+
+const ContainerDivNight = Styled.div`
+text-align: center;
+margin: 5% 0;
+padding: 3%;
+width: 80%;
+color:white;
+background-color: cadetBlue; 
+border-radius: 20px;
+box-shadow: 5px 5px 8px black;
 `
 
 const AwesomeHeader = Styled.h3`
@@ -19,18 +30,8 @@ color: white;
 text-align: center;
 margin: 0 5% 0 10%;
 `
-const AwesomeImage = Styled.img`
-display:flex;
-width:20%;
-height:auto;
-border-radius: 50%;
-box-shadow: 5px 5px 8px green;
-margin:2%;
-`
 const TheInsideDiv = Styled.div`
-width: 100%;
-text-align: left;
-margin-left:10%
+width: 80%;
 `
 
 class Card extends React.Component {
@@ -41,11 +42,12 @@ class Card extends React.Component {
           <strong>Name:</strong>{this.props.player.name}
         </AwesomeHeader>
         <TheInsideDiv>
-          <strong>Country:</strong>{this.props.player.country}
-        </TheInsideDiv>
+         <p><strong>Country:</strong>{this.props.player.country}</p> 
+        
         <p>
           <strong>Google Searches:</strong>{this.props.player.searches}
         </p>
+        </TheInsideDiv>
       </ContainerDiv>
     );
   }
